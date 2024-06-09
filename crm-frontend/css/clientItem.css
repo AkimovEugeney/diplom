@@ -1,0 +1,133 @@
+.table__row {
+  background-color: inherit;
+  border-bottom: 1px solid var(--color-gray-dark);
+}
+
+.client__id {
+  font-size: 12px;
+  color: var(--color-gray);
+}
+
+.client__full-name {
+  max-width: 260px;
+  font-size: 14px;
+  color: var(--color-black);
+}
+
+.created__date,
+.changed__date {
+  margin-right: 7px;
+  font-size: 14px;
+  color: var(--color-black);
+}
+
+.created__time,
+.changed__time {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.client_contacts-wrapp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: 142px;
+  min-width: 115px;
+  margin-top: 4px;
+}
+
+.contacts__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.client_actions button {
+  position: relative;
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: transparent;
+  padding-left: 15px;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.client__actions-wrapp {
+  display: flex;
+  gap: 32px;
+}
+
+.client__edit {
+  background-image: url('../img/btn-edit.svg');
+}
+
+.client__delete {
+  background-image: url('../img/btn-del.svg');
+}
+
+.action-wait {
+  background-image: none;
+}
+
+.actions__spinner {
+  position: absolute;
+  display: none;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-50%);
+}
+
+.actions__spinner svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  animation: spin 1s linear infinite;
+}
+
+.actions__spinner.edit__spinner {
+  stroke: var(--color-violet);
+}
+
+.actions__spinner.delete__spinner {
+  stroke: var(--color-red-errors);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.client__contacts_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--color-violet);
+  background: transparent;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.contacts__link svg {
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contacts__link:hover svg {
+  opacity: 1;
+}
